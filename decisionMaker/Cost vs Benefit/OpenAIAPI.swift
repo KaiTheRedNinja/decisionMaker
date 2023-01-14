@@ -11,7 +11,7 @@ import OpenAISwift
 func generateAnswer(question: String, onSuccess: @escaping ([String.SubSequence]?) -> Void) {
     
     // Using my personal token to call the API (Probably should have hidden this in an api)
-    let openAI = OpenAISwift(authToken: "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")
+    let openAI = OpenAISwift(authToken: "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")
     
     // Making sure we ask for the pros and cons
     var input = """
