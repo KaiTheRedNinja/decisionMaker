@@ -39,24 +39,15 @@ struct CreateCategoriesView: View {
                                     toOffset: moveTo)
                 }
             } header: {
-                VStack {
-                    HStack {
-                        Text("Categories")
-                        Spacer()
-                        Button {
-                            categories.append(.init(title: "Untitled Category",
-                                                    weight: 3))
-                            isNavigationDisabled()
-                        } label: {
-                            Image(systemName: "plus")
-                        }
-                    }
-                    if !categories.isEmpty {
-                        HStack {
-                            Text("Category Name")
-                            Spacer()
-                            Text("Significance")
-                        }
+                HStack {
+                    Text("Categories")
+                    Spacer()
+                    Button {
+                        categories.append(.init(title: "Untitled Category",
+                                                weight: 3))
+                        isNavigationDisabled()
+                    } label: {
+                        Image(systemName: "plus")
                     }
                 }
             }
