@@ -16,6 +16,10 @@ struct RandomView: View {
             switch selection {
             case "coin":
                 CoinView()
+            case "dice":
+                DiceView()
+            case "8ball":
+                EightBallView()
             default:
                 Text("You've gone too far")
             }
