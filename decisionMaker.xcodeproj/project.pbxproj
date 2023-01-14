@@ -15,6 +15,9 @@
 		9366F1462972759100008623 /* DecisionMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1452972759100008623 /* DecisionMatrixView.swift */; };
 		9366F1482972759500008623 /* CommitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1472972759500008623 /* CommitView.swift */; };
 		9366F14A2972759B00008623 /* CostBenefitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1492972759B00008623 /* CostBenefitView.swift */; };
+		9366F1502972788F00008623 /* CreateCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F14F2972788F00008623 /* CreateCategoriesView.swift */; };
+		9366F15429727AD100008623 /* AssignScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15329727AD100008623 /* AssignScoresView.swift */; };
+		9366F15629727D6900008623 /* SetScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15529727D6900008623 /* SetScoreCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		9366F1452972759100008623 /* DecisionMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionMatrixView.swift; sourceTree = "<group>"; };
 		9366F1472972759500008623 /* CommitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitView.swift; sourceTree = "<group>"; };
 		9366F1492972759B00008623 /* CostBenefitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostBenefitView.swift; sourceTree = "<group>"; };
+		9366F14F2972788F00008623 /* CreateCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoriesView.swift; sourceTree = "<group>"; };
+		9366F15329727AD100008623 /* AssignScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignScoresView.swift; sourceTree = "<group>"; };
+		9366F15529727D6900008623 /* SetScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetScoreCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				9366F1452972759100008623 /* DecisionMatrixView.swift */,
+				9366F14F2972788F00008623 /* CreateCategoriesView.swift */,
+				9366F15329727AD100008623 /* AssignScoresView.swift */,
+				9366F15529727D6900008623 /* SetScoreCell.swift */,
 			);
 			path = "Decision Matrix";
 			sourceTree = "<group>";
@@ -181,7 +190,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9366F15429727AD100008623 /* AssignScoresView.swift in Sources */,
 				9366F1442972758800008623 /* RandomView.swift in Sources */,
+				9366F15629727D6900008623 /* SetScoreCell.swift in Sources */,
+				9366F1502972788F00008623 /* CreateCategoriesView.swift in Sources */,
 				9366F1462972759100008623 /* DecisionMatrixView.swift in Sources */,
 				9366F138297273DA00008623 /* ContentView.swift in Sources */,
 				9366F14A2972759B00008623 /* CostBenefitView.swift in Sources */,

@@ -9,7 +9,30 @@ import SwiftUI
 
 struct DecisionMatrixView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            CreateCategoriesView()
+        }
+    }
+}
+
+struct Category: Identifiable, Hashable {
+    var id = UUID()
+    var title: String
+    var weight: Int
+}
+
+struct Option: Identifiable, Hashable {
+    var id = UUID()
+    var title: String
+    var scores: [Category: Int]
+
+    func totalScore() -> Int {
+        scores.map { key, value in
+            key.weight * value
+        }
+        .reduce(0) { partialResult, value in
+            partialResult + value
+        }
     }
 }
 
