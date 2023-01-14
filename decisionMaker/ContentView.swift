@@ -9,13 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            RandomView()
+                .tabItem {
+                    Label("Random",
+                          systemImage: "dice")
+                }
+            DecisionMatrixView()
+                .tabItem {
+                    Label("Considerations",
+                          systemImage: "squareshape.split.3x3")
+                }
+            CommitView()
+                .tabItem {
+                    Label("Confirm",
+                          systemImage: "checkmark.circle.badge.questionmark")
+                }
+            CostBenefitView()
+                .tabItem {
+                    // I'd like a justice system scale
+                    // but sf icons doesn't seem to have one
+                    Label("Trade",
+                          systemImage: "arrow.left.arrow.right")
+                }
         }
-        .padding()
     }
 }
 
