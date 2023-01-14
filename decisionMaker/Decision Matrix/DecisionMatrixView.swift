@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct DecisionMatrixView: View {
+    @State var showHelp: Bool = false
+
     var body: some View {
         NavigationView {
             CreateCategoriesView()
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showHelp = true
+                        } label: {
+                            Image(systemName: "info.circle")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showHelp) {
+                    NavigationView {
+                        DecisionMatrixHelpView()
+                            .navigationTitle("Help")
+                            .navigationBarTitleDisplayMode(.inline)
+                    }
+                }
         }
     }
 }

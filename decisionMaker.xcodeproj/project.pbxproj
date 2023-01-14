@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9342CDA92972F155006DBDB1 /* DecisionMatrixHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342CDA82972F155006DBDB1 /* DecisionMatrixHelpView.swift */; };
 		9366F136297273DA00008623 /* decisionMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F135297273DA00008623 /* decisionMakerApp.swift */; };
 		9366F138297273DA00008623 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F137297273DA00008623 /* ContentView.swift */; };
 		9366F13A297273DA00008623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9366F139297273DA00008623 /* Assets.xcassets */; };
@@ -15,17 +16,18 @@
 		9366F1462972759100008623 /* DecisionMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1452972759100008623 /* DecisionMatrixView.swift */; };
 		9366F1482972759500008623 /* CommitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1472972759500008623 /* CommitView.swift */; };
 		9366F14A2972759B00008623 /* CostBenefitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1492972759B00008623 /* CostBenefitView.swift */; };
-		D3CBC2582972826B00CBE126 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3CBC2572972826B00CBE126 /* OpenAISwift */; };
-		D3CBC25A2972829000CBE126 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CBC2592972829000CBE126 /* OpenAIAPI.swift */; };
 		9366F1502972788F00008623 /* CreateCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F14F2972788F00008623 /* CreateCategoriesView.swift */; };
 		9366F15429727AD100008623 /* AssignScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15329727AD100008623 /* AssignScoresView.swift */; };
 		9366F15629727D6900008623 /* SetScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15529727D6900008623 /* SetScoreCell.swift */; };
 		9366F1582972AAA600008623 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1572972AAA600008623 /* CoinView.swift */; };
 		9366F15A2972B65E00008623 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1592972B65E00008623 /* DiceView.swift */; };
 		9366F15C2972BB8C00008623 /* EightBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15B2972BB8C00008623 /* EightBallView.swift */; };
+		D3CBC2582972826B00CBE126 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3CBC2572972826B00CBE126 /* OpenAISwift */; };
+		D3CBC25A2972829000CBE126 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CBC2592972829000CBE126 /* OpenAIAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9342CDA82972F155006DBDB1 /* DecisionMatrixHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionMatrixHelpView.swift; sourceTree = "<group>"; };
 		9366F132297273DA00008623 /* decisionMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = decisionMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9366F135297273DA00008623 /* decisionMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decisionMakerApp.swift; sourceTree = "<group>"; };
 		9366F137297273DA00008623 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,13 +37,13 @@
 		9366F1452972759100008623 /* DecisionMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionMatrixView.swift; sourceTree = "<group>"; };
 		9366F1472972759500008623 /* CommitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitView.swift; sourceTree = "<group>"; };
 		9366F1492972759B00008623 /* CostBenefitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostBenefitView.swift; sourceTree = "<group>"; };
-		D3CBC2592972829000CBE126 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 		9366F14F2972788F00008623 /* CreateCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoriesView.swift; sourceTree = "<group>"; };
 		9366F15329727AD100008623 /* AssignScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignScoresView.swift; sourceTree = "<group>"; };
 		9366F15529727D6900008623 /* SetScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetScoreCell.swift; sourceTree = "<group>"; };
 		9366F1572972AAA600008623 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 		9366F1592972B65E00008623 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		9366F15B2972BB8C00008623 /* EightBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EightBallView.swift; sourceTree = "<group>"; };
+		D3CBC2592972829000CBE126 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9342CDA72972F13A006DBDB1 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				9342CDA82972F155006DBDB1 /* DecisionMatrixHelpView.swift */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
 		9366F129297273D900008623 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +91,7 @@
 				9366F14C297275BD00008623 /* Decision Matrix */,
 				9366F14D297275C700008623 /* Committing */,
 				9366F14E297275D300008623 /* Cost vs Benefit */,
+				9342CDA72972F13A006DBDB1 /* Help */,
 				9366F139297273DA00008623 /* Assets.xcassets */,
 				9366F13B297273DA00008623 /* Preview Content */,
 			);
@@ -214,6 +225,7 @@
 				9366F15C2972BB8C00008623 /* EightBallView.swift in Sources */,
 				9366F1442972758800008623 /* RandomView.swift in Sources */,
 				9366F15629727D6900008623 /* SetScoreCell.swift in Sources */,
+				9342CDA92972F155006DBDB1 /* DecisionMatrixHelpView.swift in Sources */,
 				9366F1502972788F00008623 /* CreateCategoriesView.swift in Sources */,
 				9366F1462972759100008623 /* DecisionMatrixView.swift in Sources */,
 				D3CBC25A2972829000CBE126 /* OpenAIAPI.swift in Sources */,
