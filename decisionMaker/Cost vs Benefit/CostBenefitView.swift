@@ -54,16 +54,14 @@ struct CostBenefitView: View {
                 }
             }
 
-            if !(proPoints.isEmpty && conPoints.isEmpty) {
-                Section("Pros") {
-                    ForEach(proPoints, id: \.self) { word in
-                        Text(word)
-                    }
+            Section("Pros") {
+                ForEach(proPoints, id: \.self) { word in
+                    Text(word)
                 }
-                Section("Cons") {
-                    ForEach(conPoints, id: \.self) { word in
-                        Text(word)
-                    }
+            }
+            Section("Cons") {
+                ForEach(conPoints, id: \.self) { word in
+                    Text(word)
                 }
             }
         }
