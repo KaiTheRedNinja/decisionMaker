@@ -18,6 +18,7 @@
 		9366F1502972788F00008623 /* CreateCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F14F2972788F00008623 /* CreateCategoriesView.swift */; };
 		9366F15429727AD100008623 /* AssignScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15329727AD100008623 /* AssignScoresView.swift */; };
 		9366F15629727D6900008623 /* SetScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15529727D6900008623 /* SetScoreCell.swift */; };
+		9366F1582972AAA600008623 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1572972AAA600008623 /* CoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9366F14F2972788F00008623 /* CreateCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoriesView.swift; sourceTree = "<group>"; };
 		9366F15329727AD100008623 /* AssignScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignScoresView.swift; sourceTree = "<group>"; };
 		9366F15529727D6900008623 /* SetScoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetScoreCell.swift; sourceTree = "<group>"; };
+		9366F1572972AAA600008623 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				9366F1432972758800008623 /* RandomView.swift */,
+				9366F1572972AAA600008623 /* CoinView.swift */,
 			);
 			path = Randomization;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				9366F15629727D6900008623 /* SetScoreCell.swift in Sources */,
 				9366F1502972788F00008623 /* CreateCategoriesView.swift in Sources */,
 				9366F1462972759100008623 /* DecisionMatrixView.swift in Sources */,
+				9366F1582972AAA600008623 /* CoinView.swift in Sources */,
 				9366F138297273DA00008623 /* ContentView.swift in Sources */,
 				9366F14A2972759B00008623 /* CostBenefitView.swift in Sources */,
 				9366F1482972759500008623 /* CommitView.swift in Sources */,
