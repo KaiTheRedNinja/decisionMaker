@@ -61,10 +61,10 @@
 			children = (
 				9366F135297273DA00008623 /* decisionMakerApp.swift */,
 				9366F137297273DA00008623 /* ContentView.swift */,
-				9366F1432972758800008623 /* RandomView.swift */,
-				9366F1452972759100008623 /* DecisionMatrixView.swift */,
-				9366F1472972759500008623 /* CommitView.swift */,
-				9366F1492972759B00008623 /* CostBenefitView.swift */,
+				9366F14B297275B400008623 /* Randomization */,
+				9366F14C297275BD00008623 /* Decision Matrix */,
+				9366F14D297275C700008623 /* Committing */,
+				9366F14E297275D300008623 /* Cost vs Benefit */,
 				9366F139297273DA00008623 /* Assets.xcassets */,
 				9366F13B297273DA00008623 /* Preview Content */,
 			);
@@ -77,6 +77,38 @@
 				9366F13C297273DA00008623 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9366F14B297275B400008623 /* Randomization */ = {
+			isa = PBXGroup;
+			children = (
+				9366F1432972758800008623 /* RandomView.swift */,
+			);
+			path = Randomization;
+			sourceTree = "<group>";
+		};
+		9366F14C297275BD00008623 /* Decision Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				9366F1452972759100008623 /* DecisionMatrixView.swift */,
+			);
+			path = "Decision Matrix";
+			sourceTree = "<group>";
+		};
+		9366F14D297275C700008623 /* Committing */ = {
+			isa = PBXGroup;
+			children = (
+				9366F1472972759500008623 /* CommitView.swift */,
+			);
+			path = Committing;
+			sourceTree = "<group>";
+		};
+		9366F14E297275D300008623 /* Cost vs Benefit */ = {
+			isa = PBXGroup;
+			children = (
+				9366F1492972759B00008623 /* CostBenefitView.swift */,
+			);
+			path = "Cost vs Benefit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
