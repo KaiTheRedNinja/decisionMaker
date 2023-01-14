@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import LoaderUI
+
 
 struct CostBenefitView: View {
     @State var question: String = ""
@@ -31,6 +33,7 @@ struct CostBenefitView: View {
                     } label: {
                         Text("Ask")
                     }
+                    
                     .padding(4)
                     .padding(.horizontal, 12)
                     .background {
@@ -40,22 +43,27 @@ struct CostBenefitView: View {
                     }
                     Spacer()
                 }
+                HStack {
+                    BallScaleRippleMultiple().frame(width: 120, height: 120)
+                        .padding(93)
+                }
             } else {
-                Section {
+                HStack {
                     Spacer()
-                    Button() {
+                    Button {
                         generateAnswer(question: question) { points in
                             self.points = (points?.map {
                                 String($0)
                             })!
                         }
-                    }label: {
+                    } label: {
                         Text("Ask")
                     }
+                    
                     .padding(4)
                     .padding(.horizontal, 12)
                     .background {
-//                      The Color is Aquamarine
+//                        Color.red
                         Color.init(red: 0.624, green: 1.243, blue: 0.936)
                             .cornerRadius(25)
                     }
