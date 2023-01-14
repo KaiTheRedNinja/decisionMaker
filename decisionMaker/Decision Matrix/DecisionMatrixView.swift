@@ -28,7 +28,7 @@ struct Option: Identifiable, Hashable {
 
     func totalScore() -> Int {
         scores.map { key, value in
-            key.weight * value
+            (key.weight+1) * value
         }
         .reduce(0) { partialResult, value in
             partialResult + value
