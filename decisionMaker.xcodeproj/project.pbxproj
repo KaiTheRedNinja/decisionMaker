@@ -24,6 +24,7 @@
 		9366F15C2972BB8C00008623 /* EightBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15B2972BB8C00008623 /* EightBallView.swift */; };
 		D3CBC2582972826B00CBE126 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3CBC2572972826B00CBE126 /* OpenAISwift */; };
 		D3CBC25A2972829000CBE126 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CBC2592972829000CBE126 /* OpenAIAPI.swift */; };
+		D3DAF86F2972FDB300E9823E /* LoaderUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3DAF86E2972FDB300E9823E /* LoaderUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CBC2582972826B00CBE126 /* OpenAISwift in Frameworks */,
+				D3DAF86F2972FDB300E9823E /* LoaderUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +165,7 @@
 			name = decisionMaker;
 			packageProductDependencies = (
 				D3CBC2572972826B00CBE126 /* OpenAISwift */,
+				D3DAF86E2972FDB300E9823E /* LoaderUI */,
 			);
 			productName = decisionMaker;
 			productReference = 9366F132297273DA00008623 /* decisionMaker.app */;
@@ -194,6 +197,7 @@
 			mainGroup = 9366F129297273D900008623;
 			packageReferences = (
 				D3CBC2562972826B00CBE126 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				D3DAF86D2972FDB300E9823E /* XCRemoteSwiftPackageReference "LoaderUI" */,
 			);
 			productRefGroup = 9366F133297273DA00008623 /* Products */;
 			projectDirPath = "";
@@ -443,6 +447,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		D3DAF86D2972FDB300E9823E /* XCRemoteSwiftPackageReference "LoaderUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/LoaderUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -450,6 +462,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3CBC2562972826B00CBE126 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
 			productName = OpenAISwift;
+		};
+		D3DAF86E2972FDB300E9823E /* LoaderUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3DAF86D2972FDB300E9823E /* XCRemoteSwiftPackageReference "LoaderUI" */;
+			productName = LoaderUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
