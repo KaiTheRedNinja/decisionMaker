@@ -11,7 +11,11 @@ import LoaderUI
 
 struct CostBenefitView: View {
     @State var question: String = ""
-    @State var points: [String] = []
+    @State var proPoints: [String] = []
+    @State var conPoints: [String] = []
+    @State var error: String = ""
+    @State var isLoading: Bool = false
+
     var body: some View {
         List {
             Section {
@@ -19,79 +23,80 @@ struct CostBenefitView: View {
                     "Enter a term: ",
                     text: $question
                 )
+
+                if proPoints.isEmpty && conPoints.isEmpty {
+                    HStack {
+                        Spacer()
+                        Button {
+                            ask()
+                        } label: {
+                            Text("Ask")
+                        }
+                        .disabled(question.isEmpty)
+                        Spacer()
+                    }
+                }
             }
-            
-            if points.isEmpty {
-                HStack {
-                    Spacer()
-                    Button {
-                        generateAnswer(question: question) { points in
-                            self.points = (points?.map {
-                                String($0)
-                            })!
-                        }
-                    } label: {
-                        Text("Ask")
-                    }
-                    
-                    .padding(4)
-                    .padding(.horizontal, 12)
-                    .background {
-//                        Color.red
-                        Color.init(red: 0.624, green: 1.243, blue: 0.936)
-                            .cornerRadius(25)
-                    }
-                    Spacer()
-                }
-                HStack {
-                    BallScaleRippleMultiple().frame(width: 120, height: 120)
-                        .padding(93)
-                }
-            } else {
-                HStack {
-                    Spacer()
-                    Button {
-                        generateAnswer(question: question) { points in
-                            self.points = (points?.map {
-                                String($0)
-                            })!
-                        }
-                    } label: {
-                        Text("Ask")
-                    }
-                    
-                    .padding(4)
-                    .padding(.horizontal, 12)
-                    .background {
-//                        Color.red
-                        Color.init(red: 0.624, green: 1.243, blue: 0.936)
-                            .cornerRadius(25)
-                    }
-                    Spacer()
-                }
+
+            if isLoading {
                 Section {
-                    Spacer()
-                    ForEach(points, id: \.self) { word in
-                        if word == "Pros:" || word == "Cons:"{
-                            Text("\n" + word)
-                        } else {
-                            Text(word)
-                                .padding(8)
-                                .background {
-                //                 The Color is Salmon
-                                    Color.init(red: 1.219, green: 0.624, blue: 0.556)
-                                        .cornerRadius(25)
-                                }
-                        }
+                    HStack {
+                        BallScaleRippleMultiple()
+                            .frame(width: 120, height: 120)
+                            .padding(93)
                     }
                 }
             }
+
+            if !error.isEmpty {
+                Section {
+                    Text(error)
+                }
+            }
+
+            if !(proPoints.isEmpty && conPoints.isEmpty) {
+                Section("Pros") {
+                    ForEach(proPoints, id: \.self) { word in
+                        Text(word)
+                    }
+                }
+                Section("Cons") {
+                    ForEach(conPoints, id: \.self) { word in
+                        Text(word)
+                    }
+                }
+            }
+        }
+        .navigationTitle("AI Pros and Cons")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    func ask() {
+        isLoading = true
+        generateAnswer(question: question) { points in
+            defer { isLoading = false }
+
+            let strPoints = (points?.map {
+                String($0)
+            }) ?? []
+
+            guard let prosIndex = strPoints.firstIndex(of: "Pros:"),
+                  let consIndex = strPoints.firstIndex(of: "Cons:")
+            else { return }
+
+            self.proPoints = Array(strPoints[(prosIndex+1)..<(consIndex)])
+            self.conPoints = Array(strPoints[(consIndex+1)...])
+        } onError: { error in
+            isLoading = false
+            self.error = "Failure: \(error.localizedDescription)"
         }
     }
 }
 
 struct CostBenefitView_Previews: PreviewProvider {
     static var previews: some View {
-        CostBenefitView()
+        NavigationView {
+            CostBenefitView()
+        }
     }
 }

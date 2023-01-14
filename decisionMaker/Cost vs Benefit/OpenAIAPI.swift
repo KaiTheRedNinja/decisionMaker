@@ -8,7 +8,9 @@
 import Foundation
 import OpenAISwift
 
-func generateAnswer(question: String, onSuccess: @escaping ([String.SubSequence]?) -> Void) {
+func generateAnswer(question: String,
+                    onSuccess: @escaping ([String.SubSequence]?) -> Void,
+                    onError: @escaping (Error) -> Void = { _ in }) {
     
     // Using my personal token to call the API (Probably should have hidden this in an api)
     let openAI = OpenAISwift(authToken: "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")
@@ -31,10 +33,9 @@ func generateAnswer(question: String, onSuccess: @escaping ([String.SubSequence]
             let points = success.choices.first?.text.split(whereSeparator: \.isNewline)
             
             onSuccess(points)
-            
-            print(points)
         case .failure(let failure):
             print(failure.localizedDescription)
+            onError(failure)
         }
     }
     
