@@ -108,15 +108,18 @@ struct CommitView: View {
                         }
                     }
                     .onAppear {
+                        percentTimeLeft = 1
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                             withAnimation(.linear(duration: 5)) {
                                 percentTimeLeft = 0
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                guard percentTimeLeft == 0 else { return }
                                 withAnimation {
                                     goingToDo = nil
                                 }
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                    guard percentTimeLeft == 0 else { return }
                                     percentTimeLeft = 1
                                 }
                             }
