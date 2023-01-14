@@ -15,7 +15,7 @@
 		9366F13D297273DA00008623 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9366F13C297273DA00008623 /* Preview Assets.xcassets */; };
 		9366F1442972758800008623 /* RandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1432972758800008623 /* RandomView.swift */; };
 		9366F1462972759100008623 /* DecisionMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1452972759100008623 /* DecisionMatrixView.swift */; };
-		9366F1482972759500008623 /* CommitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1472972759500008623 /* CommitView.swift */; };
+		9366F1482972759500008623 /* ReinforcementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1472972759500008623 /* ReinforcementView.swift */; };
 		9366F14A2972759B00008623 /* CostBenefitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1492972759B00008623 /* CostBenefitView.swift */; };
 		9366F1502972788F00008623 /* CreateCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F14F2972788F00008623 /* CreateCategoriesView.swift */; };
 		9366F15429727AD100008623 /* AssignScoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15329727AD100008623 /* AssignScoresView.swift */; };
@@ -23,6 +23,7 @@
 		9366F1582972AAA600008623 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1572972AAA600008623 /* CoinView.swift */; };
 		9366F15A2972B65E00008623 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F1592972B65E00008623 /* DiceView.swift */; };
 		9366F15C2972BB8C00008623 /* EightBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F15B2972BB8C00008623 /* EightBallView.swift */; };
+		936F37722973706200BE4380 /* ReinforcementHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F37712973706200BE4380 /* ReinforcementHelpView.swift */; };
 		D3CBC2582972826B00CBE126 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3CBC2572972826B00CBE126 /* OpenAISwift */; };
 		D3CBC25A2972829000CBE126 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CBC2592972829000CBE126 /* OpenAIAPI.swift */; };
 		D3DAF86F2972FDB300E9823E /* LoaderUI in Frameworks */ = {isa = PBXBuildFile; productRef = D3DAF86E2972FDB300E9823E /* LoaderUI */; };
@@ -38,7 +39,7 @@
 		9366F13C297273DA00008623 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9366F1432972758800008623 /* RandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomView.swift; sourceTree = "<group>"; };
 		9366F1452972759100008623 /* DecisionMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionMatrixView.swift; sourceTree = "<group>"; };
-		9366F1472972759500008623 /* CommitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitView.swift; sourceTree = "<group>"; };
+		9366F1472972759500008623 /* ReinforcementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReinforcementView.swift; sourceTree = "<group>"; };
 		9366F1492972759B00008623 /* CostBenefitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostBenefitView.swift; sourceTree = "<group>"; };
 		9366F14F2972788F00008623 /* CreateCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoriesView.swift; sourceTree = "<group>"; };
 		9366F15329727AD100008623 /* AssignScoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignScoresView.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		9366F1572972AAA600008623 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 		9366F1592972B65E00008623 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		9366F15B2972BB8C00008623 /* EightBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EightBallView.swift; sourceTree = "<group>"; };
+		936F37712973706200BE4380 /* ReinforcementHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReinforcementHelpView.swift; sourceTree = "<group>"; };
 		D3CBC2592972829000CBE126 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 			children = (
 				9342CDA82972F155006DBDB1 /* DecisionMatrixHelpView.swift */,
 				9342CDAA297364B3006DBDB1 /* RandomizationHelpView.swift */,
+				936F37712973706200BE4380 /* ReinforcementHelpView.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -94,7 +97,7 @@
 				9366F137297273DA00008623 /* ContentView.swift */,
 				9366F14B297275B400008623 /* Randomization */,
 				9366F14C297275BD00008623 /* Decision Matrix */,
-				9366F14D297275C700008623 /* Committing */,
+				9366F14D297275C700008623 /* Reinforcement */,
 				9366F14E297275D300008623 /* Cost vs Benefit */,
 				9342CDA72972F13A006DBDB1 /* Help */,
 				9366F139297273DA00008623 /* Assets.xcassets */,
@@ -133,12 +136,12 @@
 			path = "Decision Matrix";
 			sourceTree = "<group>";
 		};
-		9366F14D297275C700008623 /* Committing */ = {
+		9366F14D297275C700008623 /* Reinforcement */ = {
 			isa = PBXGroup;
 			children = (
-				9366F1472972759500008623 /* CommitView.swift */,
+				9366F1472972759500008623 /* ReinforcementView.swift */,
 			);
-			path = Committing;
+			path = Reinforcement;
 			sourceTree = "<group>";
 		};
 		9366F14E297275D300008623 /* Cost vs Benefit */ = {
@@ -239,9 +242,10 @@
 				9366F15A2972B65E00008623 /* DiceView.swift in Sources */,
 				9366F1582972AAA600008623 /* CoinView.swift in Sources */,
 				9366F138297273DA00008623 /* ContentView.swift in Sources */,
+				936F37722973706200BE4380 /* ReinforcementHelpView.swift in Sources */,
 				9366F14A2972759B00008623 /* CostBenefitView.swift in Sources */,
 				9342CDAB297364B3006DBDB1 /* RandomizationHelpView.swift in Sources */,
-				9366F1482972759500008623 /* CommitView.swift in Sources */,
+				9366F1482972759500008623 /* ReinforcementView.swift in Sources */,
 				9366F136297273DA00008623 /* decisionMakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

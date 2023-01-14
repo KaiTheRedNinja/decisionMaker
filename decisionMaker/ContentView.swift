@@ -20,7 +20,7 @@ struct ContentView: View {
                     Label("Considerations",
                           systemImage: "squareshape.split.3x3")
                 }
-            CommitView()
+            ReinforcementView()
                 .tabItem {
                     Label("Confirm",
                           systemImage: "checkmark.circle.badge.questionmark")

@@ -1,5 +1,5 @@
 //
-//  CommitView.swift
+//  ReinforcementView.swift
 //  decisionMaker
 //
 //  Created by Kai Quan Tay on 14/1/23.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct CommitView: View {
+struct ReinforcementView: View {
     @State var goingToDo: Bool?
     @State var percentTimeLeft: CGFloat = 1
+    @State var showHelp: Bool = false
 
     var body: some View {
         ZStack {
@@ -19,13 +20,28 @@ struct CommitView: View {
                 willYouDoItView
             }
         }
+        .sheet(isPresented: $showHelp) {
+            NavigationView {
+                ReinforcementHelpView()
+                    .navigationTitle("Help")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+        }
     }
 
     var willYouDoItView: some View {
         VStack {
-            Text("Are you going to do it?")
-                .font(.title)
-                .padding(.bottom, 30)
+            HStack {
+                Text("Are you going to do it?")
+                    .font(.title)
+                Button {
+                    showHelp = true
+                } label: {
+                    Image(systemName: "info.circle")
+                        .font(.title2)
+                }
+            }
+            .padding(.bottom, 30)
             HStack {
                 Spacer()
                 Button {
@@ -132,6 +148,6 @@ struct CommitView: View {
 
 struct CommitView_Previews: PreviewProvider {
     static var previews: some View {
-        CommitView()
+        ReinforcementView()
     }
 }
