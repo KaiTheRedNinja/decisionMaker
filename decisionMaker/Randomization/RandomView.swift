@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RandomView: View {
     @State var selection: String = "coin"
+    @State var showHelp: Bool = false
 
     var body: some View {
         VStack {
@@ -26,15 +27,32 @@ struct RandomView: View {
             Spacer()
         }
         .safeAreaInset(edge: .top) {
-            Picker(selection: $selection) {
-                ForEach(["coin", "dice", "8ball"], id: \.self) { name in
-                    Text(name)
+            HStack {
+                Picker(selection: $selection) {
+                    ForEach(["coin", "dice", "8ball"], id: \.self) { name in
+                        Text(name)
+                    }
+                } label: {
+                    EmptyView()
                 }
-            } label: {
-                EmptyView()
+                .pickerStyle(.segmented)
+                .padding(.horizontal, 10)
+
+                Button {
+                    showHelp = true
+                } label: {
+                    Image(systemName: "info.circle")
+                        .font(.title2)
+                }
+                .offset(x: -6)
             }
-            .pickerStyle(.segmented)
-            .padding(.horizontal, 10)
+        }
+        .sheet(isPresented: $showHelp) {
+            NavigationView {
+                RandomizationHelpView()
+                    .navigationTitle("Help")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
 }

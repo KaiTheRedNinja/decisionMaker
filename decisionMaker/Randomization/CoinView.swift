@@ -48,6 +48,10 @@ struct CoinView: View {
             } label: {
                 coin
             }
+
+            Text("\(coinState ? "Heads" : "Tails")")
+                .padding(.top, 20)
+                .opacity(veryBlurIcon ? 0 : 1)
         }
     }
     

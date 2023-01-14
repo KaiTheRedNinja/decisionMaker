@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9342CDA92972F155006DBDB1 /* DecisionMatrixHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342CDA82972F155006DBDB1 /* DecisionMatrixHelpView.swift */; };
+		9342CDAB297364B3006DBDB1 /* RandomizationHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9342CDAA297364B3006DBDB1 /* RandomizationHelpView.swift */; };
 		9366F136297273DA00008623 /* decisionMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F135297273DA00008623 /* decisionMakerApp.swift */; };
 		9366F138297273DA00008623 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9366F137297273DA00008623 /* ContentView.swift */; };
 		9366F13A297273DA00008623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9366F139297273DA00008623 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		9342CDA82972F155006DBDB1 /* DecisionMatrixHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionMatrixHelpView.swift; sourceTree = "<group>"; };
+		9342CDAA297364B3006DBDB1 /* RandomizationHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizationHelpView.swift; sourceTree = "<group>"; };
 		9366F132297273DA00008623 /* decisionMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = decisionMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9366F135297273DA00008623 /* decisionMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decisionMakerApp.swift; sourceTree = "<group>"; };
 		9366F137297273DA00008623 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				9342CDA82972F155006DBDB1 /* DecisionMatrixHelpView.swift */,
+				9342CDAA297364B3006DBDB1 /* RandomizationHelpView.swift */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				9366F1582972AAA600008623 /* CoinView.swift in Sources */,
 				9366F138297273DA00008623 /* ContentView.swift in Sources */,
 				9366F14A2972759B00008623 /* CostBenefitView.swift in Sources */,
+				9342CDAB297364B3006DBDB1 /* RandomizationHelpView.swift in Sources */,
 				9366F1482972759500008623 /* CommitView.swift in Sources */,
 				9366F136297273DA00008623 /* decisionMakerApp.swift in Sources */,
 			);
