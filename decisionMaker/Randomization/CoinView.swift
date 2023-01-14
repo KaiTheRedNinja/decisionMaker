@@ -11,17 +11,17 @@ struct CoinView: View {
     @State var yRotations: CGFloat = 0
     @State var zRotations: CGFloat = 0
     @State var bounce: Bool = false
-
+    
     @State var coinState: Bool = true
     @State var veryBlurIcon: Bool = false
-
+    
     @State var flipNumber: Int = 0
-
+    
     var body: some View {
         VStack {
             Button {
                 let currentFlipNumber = flipNumber
-
+                
                 yRotations = 0
                 zRotations = 0
                 withAnimation(.easeOut(duration: 2)) {
@@ -50,7 +50,7 @@ struct CoinView: View {
             }
         }
     }
-
+    
     var coin: some View {
         ZStack {
             Circle()
@@ -62,12 +62,31 @@ struct CoinView: View {
         }
         .frame(width: 160, height: 160)
         .rotation3DEffect(.degrees(yRotations), axis: (x: 0,
-                                                      y: 1,
-                                                      z: 0))
+                                                       y: 1,
+                                                       z: 0))
         .rotation3DEffect(.degrees(zRotations), axis: (x: 0,
-                                                      y: 0,
-                                                      z: 1))
+                                                       y: 0,
+                                                       z: 1))
+        
+        
     }
+    var answerType: some View{
+        
+        VStack{
+        label: do {
+            if coinState == true {
+                let answer="HEADS"
+                Text(answer)
+            }
+            else if coinState {
+                let answer="TAILS"
+                Text(answer)
+            }
+        }
+        }
+    }
+    
+    
 }
 
 struct CoinView_Previews: PreviewProvider {
