@@ -13,12 +13,17 @@ struct CreateCategoriesView: View {
 
     @State var disableNavigation: Bool = true
 
+    @State var errorText: String = "Add at least two categories and options"
+
     var body: some View {
         List {
             Section {
                 ForEach($categories) { $category in
                     HStack {
                         TextField("Category Name", text: $category.title)
+                            .onChange(of: category.title) { _ in
+                                isNavigationDisabled()
+                            }
                         Spacer()
 
                         Picker(selection: $category.weight) {
@@ -56,6 +61,9 @@ struct CreateCategoriesView: View {
                 ForEach($options) { $option in
                     HStack {
                         TextField("Option Name", text: $option.title)
+                            .onChange(of: option.title) { _ in
+                                isNavigationDisabled()
+                            }
                     }
                 }
                 .onDelete { index in
@@ -85,27 +93,31 @@ struct CreateCategoriesView: View {
                     AssignScoresView(categories: categories, options: options)
                 }
                 .disabled(disableNavigation)
+
+                if !errorText.isEmpty && disableNavigation {
+                    Text(errorText)
+                        .italic()
+                        .foregroundColor(.gray)
+                        .font(.subheadline)
+                }
             }
         }
         .navigationTitle("Decision Matrix")
     }
 
     func isNavigationDisabled() {
-        if categories.isEmpty || options.isEmpty {
+        if categories.count < 2 || options.count < 2 {
             disableNavigation = true
-            return
-        }
-        if Array(Set(categories.map({ $0.title }))).count != categories.count {
+            errorText = "Add at least two categories and options"
+        } else if Array(Set(categories.map({ $0.title }))).count != categories.count {
             disableNavigation = true
-            return
-        }
-        if Array(Set(options.map({ $0.title }))).count != options.count {
+            errorText = "No duplicate category names allowed"
+        } else if Array(Set(options.map({ $0.title }))).count != options.count {
             disableNavigation = true
-            return
+            errorText = "No duplicate option names allowed"
+        } else {
+            disableNavigation = false
         }
-
-        disableNavigation = false
-        return
     }
 }
 
