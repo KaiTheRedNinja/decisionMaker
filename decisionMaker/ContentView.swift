@@ -22,14 +22,14 @@ struct ContentView: View {
                 }
             ReinforcementView()
                 .tabItem {
-                    Label("Confirm",
+                    Label("Reinforcement",
                           systemImage: "checkmark.circle.badge.questionmark")
                 }
             CostBenefitView()
                 .tabItem {
                     // I'd like a justice system scale
                     // but sf icons doesn't seem to have one
-                    Label("Trade",
+                    Label("Pros Cons",
                           systemImage: "arrow.left.arrow.right")
                 }
         }
