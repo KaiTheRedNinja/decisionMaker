@@ -52,8 +52,13 @@ struct ReinforcementView: View {
                         .foregroundColor(.init(uiColor: UIColor.systemBackground))
                         .frame(width: 140, height: 100)
                         .background {
-                            Color.green
-                                .cornerRadius(15)
+                            ZStack {
+                                Color.green
+                                    .cornerRadius(15)
+                                    .blur(radius: 10)
+                                Color.green
+                                    .cornerRadius(15)
+                            }
                         }
                 }
                 Spacer()
@@ -65,8 +70,13 @@ struct ReinforcementView: View {
                         .foregroundColor(.init(uiColor: UIColor.systemBackground))
                         .frame(width: 140, height: 100)
                         .background {
-                            Color.red
-                                .cornerRadius(15)
+                            ZStack {
+                                Color.red
+                                    .cornerRadius(15)
+                                    .blur(radius: 10)
+                                Color.red
+                                    .cornerRadius(15)
+                            }
                         }
                 }
                 Spacer()
