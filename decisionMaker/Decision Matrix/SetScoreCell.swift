@@ -19,8 +19,15 @@ struct SetScoreCell: View {
 
                 HStack {
                     ForEach(0..<5) { index in
-                        Image(systemName: "star.fill")
-                            .foregroundColor(index < (option.scores[category] ?? 0) ? .yellow : .gray)
+                        ZStack {
+                            Image(systemName: "star.fill")
+
+                            if index < (option.scores[category] ?? 0) {
+                                Image(systemName: "circle.fill")
+                                    .blur(radius: 25)
+                            }
+                        }
+                        .foregroundColor(index < (option.scores[category] ?? 0) ? .yellow : .gray)
                     }
                 }
                 .overlay {
