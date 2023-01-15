@@ -15,7 +15,7 @@ func generateAnswer(question: String,
     
     // Using my personal token to call the API (Probably should have hidden this in an api)
     //put key in here:
-    let openAI = OpenAISwift(authToken: "")
+    let openAI = OpenAISwift(authToken: "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")
     // Making sure we ask for the pros and cons
     var input = """
     In bullet points, in the format of
