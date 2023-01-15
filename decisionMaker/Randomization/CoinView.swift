@@ -46,7 +46,14 @@ struct CoinView: View {
                     }
                 }
             } label: {
-                coin
+                ZStack {
+                    Circle()
+                        .frame(width: 160, height: 160)
+                        .opacity(0.5)
+                        .foregroundColor(.yellow)
+                        .blur(radius: 20)
+                    coin
+                }
             }
 
             Text("\(coinState ? "Heads" : "Tails")")
@@ -71,26 +78,7 @@ struct CoinView: View {
         .rotation3DEffect(.degrees(zRotations), axis: (x: 0,
                                                        y: 0,
                                                        z: 1))
-        
-        
     }
-    var answerType: some View{
-        
-        VStack{
-        label: do {
-            if coinState == true {
-                let answer="HEADS"
-                Text(answer)
-            }
-            else if coinState {
-                let answer="TAILS"
-                Text(answer)
-            }
-        }
-        }
-    }
-    
-    
 }
 
 struct CoinView_Previews: PreviewProvider {
