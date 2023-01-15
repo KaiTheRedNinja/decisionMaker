@@ -12,9 +12,10 @@ func generateAnswer(question: String,
                     onSuccess: @escaping ([String.SubSequence]?) -> Void,
                     onError: @escaping (Error) -> Void = { _ in }) {
     
-    // Using my personal token to call the API (Probably should have hidden this in an api)
-    let openAI = OpenAISwift(authToken: "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")
     
+    // Using my personal token to call the API (Probably should have hidden this in an api)
+    //put key in here:
+    let openAI = OpenAISwift(authToken: "")
     // Making sure we ask for the pros and cons
     var input = """
     In bullet points, in the format of

@@ -49,6 +49,8 @@
 		9366F15B2972BB8C00008623 /* EightBallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EightBallView.swift; sourceTree = "<group>"; };
 		936F37712973706200BE4380 /* ReinforcementHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReinforcementHelpView.swift; sourceTree = "<group>"; };
 		D3CBC2592972829000CBE126 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
+		D3DAF8702973582300E9823E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3DAF8712973582F00E9823E /* decisionMaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = decisionMaker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,8 @@
 		9366F134297273DA00008623 /* decisionMaker */ = {
 			isa = PBXGroup;
 			children = (
+				D3DAF8712973582F00E9823E /* decisionMaker.entitlements */,
+				D3DAF8702973582300E9823E /* Info.plist */,
 				9366F135297273DA00008623 /* decisionMakerApp.swift */,
 				9366F137297273DA00008623 /* ContentView.swift */,
 				9366F14B297275B400008623 /* Randomization */,
@@ -372,11 +376,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = decisionMaker/decisionMaker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"decisionMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = FAJ54SFG5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = decisionMaker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -400,11 +407,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = decisionMaker/decisionMaker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"decisionMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = FAJ54SFG5X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = decisionMaker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -32,7 +32,7 @@ struct ContentView: View {
                     Label("Pros Cons",
                           systemImage: "arrow.left.arrow.right")
                 }
-        }
+        } 
     }
 }
 

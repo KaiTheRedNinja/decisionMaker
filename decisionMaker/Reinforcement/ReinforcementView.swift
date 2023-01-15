@@ -5,6 +5,7 @@
 //  Created by Kai Quan Tay on 14/1/23.
 //
 
+import UserNotifications
 import SwiftUI
 
 struct ReinforcementView: View {
@@ -126,6 +127,7 @@ struct ReinforcementView: View {
                                 Color.green
                                     .cornerRadius(5)
                                     .frame(width: proxy.size.width*percentTimeLeft)
+                                    .onAppear(perform: {sendNotif()})
                             } else {
                                 Color.red
                                     .cornerRadius(5)
@@ -154,7 +156,32 @@ struct ReinforcementView: View {
             }
         }
     }
+    
+    func sendNotif() {
+        let content = UNMutableNotificationContent()
+        content.title = "Have you done it yet?"
+        content.body = "Have you completed your task yet? If yes good job!"
+        // Configure the recurring date.
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+           
+        // Create the trigger as a repeating event.
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1800, repeats: false)
+        //Create notification request
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content, trigger: trigger)
+        print("notification scheduled")
+        // Schedule the request with the system.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+            if error != nil {
+                // Handle any errors.
+            }
+        }
+    }
 }
+
 
 struct CommitView_Previews: PreviewProvider {
     static var previews: some View {
