@@ -17,6 +17,14 @@ struct CostBenefitView: View {
     @State var isLoading: Bool = false
 
     var body: some View {
+        NavigationView {
+            content
+                .navigationTitle("AI Pros and Cons")
+                .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+
+    var content: some View {
         List {
             Section {
                 TextField(
@@ -65,8 +73,6 @@ struct CostBenefitView: View {
                 }
             }
         }
-        .navigationTitle("AI Pros and Cons")
-        .navigationBarTitleDisplayMode(.inline)
     }
 
     func ask() {
@@ -93,8 +99,6 @@ struct CostBenefitView: View {
 
 struct CostBenefitView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            CostBenefitView()
-        }
+        CostBenefitView()
     }
 }
