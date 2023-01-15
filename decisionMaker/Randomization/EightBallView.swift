@@ -75,6 +75,11 @@ struct EightBallView: View {
             Circle()
                 .foregroundColor(.black)
                 .frame(width: 300, height: 300)
+                .blur(radius: 20)
+                .offset(x: -8, y: 10)
+            Circle()
+                .foregroundColor(.black)
+                .frame(width: 300, height: 300)
 
             ZStack {
                 Circle()
